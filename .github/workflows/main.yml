@@ -17,6 +17,7 @@ jobs:
           echo "hello"
           echo "hello2"
   build:
+    needs: [build-docker-1]
     runs-on: ubuntu-latest
     strategy:
       matrix:
